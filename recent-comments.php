@@ -50,7 +50,7 @@ Example: display_recent_comments(10,150,'<ul>','</ul>','<li>','</li>','no');
 
 function display_recent_comments($tmp_number,$tmp_content_characters = 100,$tmp_global_before,$tmp_global_after,$tmp_before,$tmp_after,$link = 'no'){
 	global $wpdb;
-	$query = "SELECT * FROM " . $wpdb->base_prefix . "site_comments WHERE comment_approved = '1' ORDER BY site_comment_id DESC LIMIT " . $tmp_number;
+	$query = $wpdb->prepare("SELECT * FROM " . $wpdb->base_prefix . "site_comments WHERE comment_approved = '1' ORDER BY site_comment_id DESC LIMIT %d", $tmp_number);
 	$tmp_comments = $wpdb->get_results( $query, ARRAY_A );
 	
 	if (count($tmp_comments) > 0){
