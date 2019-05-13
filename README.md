@@ -2,6 +2,12 @@
 
 **INACTIVE NOTICE: This plugin is unsupported by WPMUDEV, we've published it here for those technical types who might want to fork and maintain it for their needs.**
 
+## Translations
+
+Translation files can be found at https://github.com/wpmudev/translations
+
+## Usage
+
 Recent comments shows all the latest comments from across your entire network on your main site - simply, efficiently and quickly. This plugin works with Comment Indexer to create a stream of every comment made on your network.
 
 ### Simple Configuration
